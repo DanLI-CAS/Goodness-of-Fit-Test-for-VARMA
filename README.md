@@ -1,14 +1,10 @@
 ### 弱误差情况下的向量自回归移动平均模型的拟合优度检验
 
 本项目针对向量自回归移动平均模型（VARMA(p,q)）进行拟合优度检验。给定$d$维弱平稳时间序列数据$\{X_{t},t=1,\ldots,n\}$, 本项目检验
-\begin{equation}\label{hypothesis2}
-	%\begin{aligned}
-	%&H_{0}:\left\{X_{t}\right\} \text{ 是VARMA(p,q)序列 vs.}\\
-	%&H_{1}:\left\{X_{t}\right\}\text{ 不是VARMA(p,q)序列或者满足VARMA(P,Q)模型，且$P>p$或者$Q>q$} 
-	%&H_{1}:\left\{X_{t}\right\}\text{ 不是VARMA(p,q)序列}
-	%\end{aligned}
+$$
+
 	H_{0}:\left\{X_{t}\right\} \text{ 是VARMA(p,q)序列\quad v.s}\quad H_{1}:\left\{X_{t}\right\}\text{ 不是VARMA(p,q)序列}
-\end{equation}
+$$
 
 针对宏观经济与金融数据中常见的弱误差（误差项不相关但不独立，比如存在条件异方差）情形，传统的拟合优度检验通常会产生严重的渐近分布偏移。本项目提出了一种新的拟合优度检验方法。 我们基于托普利茨矩阵构造统计量，并采用自助法来获得假设检验的临界值。本项目所提假设检验方法能够有效控制第一类错误概率，且具有良好的检验功效。
 
